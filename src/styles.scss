@@ -1,0 +1,87 @@
+/*===============================================
+
+    base.css
+
+    -Grundliegnde Einstellungen f�r HTML
+
+    Autor Niklas Krohn
+
+===============================================*/
+@media screen {
+    /**
+      * Grundlegende Einstellungen
+      */
+
+    /*Boxen werden von content zu border boxen. Von Paul Irish*/
+    html {
+        box-sizing: border-box;
+        overflow-y: scroll;
+        /*Verhindert Zoom nach Wechsel von Porträt/Lanscape in IE on Windows Phone and in iOS.*/
+       -webkit-text-size-adjust: 100%;
+       -ms-text-size-adjust: 100%;
+    }
+
+    /*Eigenschaft von box-sizing wird vererbt. Die Pseudoklassen als Vorsichtsma�name um keinen eingebundenen Code zu ver�ndern.*/
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    /*Vermeidung von "collapsing margins"*/
+    h1, h2, h3, h4, h5, h6,
+    p, ul, ol, blockquote {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    /*Elemente visuell verstecken, aber für Screenreader zugänglich lassen. Gilt momentan als best practice zum verstecken von Text.*/
+    .visually-hidden {
+        position: absolute;
+
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px 0;
+
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    a:link {
+        color: #0b74b8;
+    }
+
+    a:visited {
+        color: #36aade;
+    }
+
+    a:hover, a:focus {
+        color: #f5662e;
+    }
+
+    a:active {
+        color: #d90000;
+    }
+    body {
+        font-family: 'Source Sans Pro', Arial, sans-serif;
+        font-size: 1rem;
+
+        min-width: 320px;
+        margin: 0 auto;
+    }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+} 
